@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Индикатор выполнения без JavaScript</title> 
+    <style> 
+        body { 
+            background-image: url('https://i.pinimg.com/736x/c7/79/12/c77912540ae464241aa60ca73320f916.jpg'); 
+            background-size: cover;  
+            background-position: center center;  
+            background-attachment: fixed;  
+            color: white;  
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+        } 
+ 
+        .progress-container { 
+            margin-top: 20px; 
+        } 
+ 
+        progress { 
+            width: 80%; 
+            height: 30px; 
+        } 
+ 
+        .status { 
+            font-size: 20px; 
+            margin-top: 10px; 
+        } 
+ 
+        @keyframes progress-animation { 
+            0% { 
+                width: 0; 
+            } 
+            100% { 
+                width: 100%;  
+            } 
+        } 
+ 
+        .progress-bar { 
+            animation: progress-animation 5s ease-in-out forwards; 
+            width: 0; 
+            height: 30px; 
+            background-color: #4CAF50; 
+        } 
+ 
+        .download-button { 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        } 
+ 
+        .download-button:hover { 
+            background-color: #45a049; 
+        } 
+ 
+    </style> 
+</head> 
+<body> 
+ 
+    <h1>Индикатор выполнения загрузки PDF</h1> 
+ 
+    <div class="progress-container"> 
+        <p>Загрузка PDF файла:</p> 
+ 
+        <div class="progress-bar"></div> 
+    </div> 
+ 
+    <p class="status">Завершено на 100%</p> 
+     
+    <a href="Date a Live volume 16.pdf" download> 
+        <button class="download-button">Скачать PDF</button> 
+    </a> 
+</body> 
+</html>
